@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Getting started with yabi | yabi blog</title>
+    <meta name="description" content="Developer blog for the yabi python tool"/>
+    <meta name="author" content="menganha"/>
+    <meta name="keywords" content="blog, python, development"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta charset="UTF-8"/>
+    <link rel="stylesheet" href="/style.css"/>
+</head>
+
+<body>
+
+<header>
+    <div id="title">
+        <a href="/">yabi blog</a>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/archive.html">Archive</a></li>
+            <li><a href="/tags.html">Tags</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+<article class="post">
+    <h2>Getting started with yabi</h2>
+    <p>Once yabi is installed, say, you want to create a new blog that describes your
+philosophical thoughts. You call it <em>Discourses</em>. To create this new blog type
+in a terminal</p>
+<pre><code>yabi init Discourses
+</code></pre>
+<p>now navigate to the newly created folder</p>
+<pre><code>cd Discourses
+</code></pre>
+<p>To publish your first though, create a new file on, e.g.,
+<code>posts/my_first_thought.md</code>. The only requirements for a post is that</p>
+<ol>
+<li>It is somewhere inside the <code>posts</code> folder</li>
+<li>Has set the label <code>draft</code> to "yes" or "no" at the file header.</li>
+<li>It has a level 1 Markdown heading with the title of the post right after the label(s).</li>
+</ol>
+<p>Apart from these minimal requirements, the post can have any valid Markdown syntax.</p>
+<pre><code>draft: no
+
+# My first thought
+
+I will drink more water. I will exercise more and I will wake up earlier.
+
+No, I'm not. I rather not to.
+</code></pre>
+<p>Finally, build the website using the command</p>
+<pre><code>yabi build
+</code></pre>
+<p>All the contents of the website are built under the folder <code>public</code>. You can
+upload these files to any hosting service of your liking. If you wish to check
+how the site will look you can use the command</p>
+<pre><code>yabi test
+</code></pre>
+<p>which will create a local server with your website on <code>http://localhost:9090</code> by
+default.</p>
+</article>
+</main>
+
+<footer>
+    <p>&copy; Copyright 2022 by menganha </p>
+</footer>
+
+</body>
+
+</html>
